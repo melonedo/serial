@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 2.8.3)
+cmake_minimum_required(VERSION 3.10)
 project(serial)
 
 # Find catkin
@@ -62,7 +62,7 @@ add_dependencies(serial_example ${PROJECT_NAME})
 target_link_libraries(serial_example ${PROJECT_NAME})
 
 ## Include headers
-include_directories(include)
+target_include_directories(${PROJECT_NAME} PUBLIC include)
 
 ## Install executable
 # install(TARGETS ${PROJECT_NAME}
